@@ -34,15 +34,15 @@ void motor_A_control(int direction_a, int motor_speed_a) //모터 A의 방향(di
   if(direction_a == HIGH)
   {
 
-    digitalWrite(IN1, HIGH);
-    digitalWrite(IN2, LOW);
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
      analogWrite(ENA,motor_speed_a); //모터의 속도 제어
     
   }
   else
   {
-    digitalWrite(IN1, LOW); //모터의 방향 제어
-    digitalWrite(IN2, HIGH);
+    digitalWrite(IN1, HIGH); //모터의 방향 제어
+    digitalWrite(IN2, LOW);
     analogWrite(ENA,motor_speed_a);
     
   }
